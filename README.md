@@ -26,7 +26,8 @@ try{
         "print_position" => 1
         "show_print_dialog"=> false
     ];
-    $wcgls_client->PrintLabels($args)
+    $response = $wcgls_client->PrintLabels($args);
+    var_dump($response);
 }
 catch (Exception $e){
     echo $e->getMessage();
